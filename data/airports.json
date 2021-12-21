@@ -1,0 +1,19 @@
+{
+  "airports": [
+    {
+      "code": "EPA",
+      "city": "Buenos Aires",
+      "location": "El Palomar, provincia de Buenos Aires"
+    },
+    {
+      "code": "COR",
+      "city": "Cordoba",
+      "location": "Cordoba Capital"
+    },
+    {
+      "code": "MDZ",
+      "city": "Mendoza",
+      "location": "Departamento Las Heras, provincia de Mendoza"
+    }
+  ]
+}

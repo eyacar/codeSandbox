@@ -1,0 +1,154 @@
+{
+  "flights": [
+    {
+      "id": "RmxpZ2h0SW5mbzp7ImZsaWdodE5vIjo1MDAwLCJkZXBhcnR1cmVEYXRlIjoiMjAxOS0wMy0xMVQwNjozMDowMC4wMDAtMDM6MDAiLCJsZmlkIjo1NDc1N30=",
+      "origin": "EPA",
+      "destination": "COR",
+      "departureDate": "2019-03-11T06:30:00.000-03:00",
+      "arrivalDate": "2019-03-11T08:00:00.000-03:00",
+      "flightNo": 5000,
+      "fares": [
+        {
+          "fareRef": "1",
+          "passengerType": "ADULT",
+          "class": "S",
+          "basis": "STANDBY",
+          "availability": 0,
+          "taxes": [
+            {
+              "taxRef": "621",
+              "codeType": "TAX",
+              "amount": 20,
+              "description": "Tasa de Seguridad TQ"
+            },
+            {
+              "taxRef": "622",
+              "codeType": "TAX",
+              "amount": 89.94,
+              "description": "Tasa Aeroportuaria XR"
+            },
+            {
+              "taxRef": "623",
+              "codeType": "TAX",
+              "amount": 0,
+              "description": "IVA Argentina"
+            },
+            {
+              "taxRef": "801",
+              "codeType": "TAX",
+              "amount": 10,
+              "description": "Service Fee"
+            }
+          ],
+          "prices": {
+            "afterTax": 119.94,
+            "beforeTax": 0
+          }
+        }
+      ],
+      "carrier": "FO",
+      "international": false,
+      "currency": "ARS"
+    },
+    {
+      "id": "RmxpZ2h0SW5mbzp7ImZsaWdodE5vIjo1MDE4LCJkZXBhcnR1cmVEYXRlIjoiMjAxOS0wMy0xMVQxOTozNTowMC4wMDAtMDM6MDAiLCJsZmlkIjo1NDc2MX0=",
+      "origin": "EPA",
+      "destination": "COR",
+      "departureDate": "2019-03-11T19:35:00.000-03:00",
+      "arrivalDate": "2019-03-11T21:05:00.000-03:00",
+      "flightNo": 5018,
+      "fares": [
+        {
+          "fareRef": "2",
+          "passengerType": "ADULT",
+          "class": "S",
+          "basis": "STANDBY",
+          "availability": 0,
+          "taxes": [
+            {
+              "taxRef": "621",
+              "codeType": "TAX",
+              "amount": 20,
+              "description": "Tasa de Seguridad TQ"
+            },
+            {
+              "taxRef": "622",
+              "codeType": "TAX",
+              "amount": 89.94,
+              "description": "Tasa Aeroportuaria XR"
+            },
+            {
+              "taxRef": "623",
+              "codeType": "TAX",
+              "amount": 0,
+              "description": "IVA Argentina"
+            },
+            {
+              "taxRef": "801",
+              "codeType": "TAX",
+              "amount": 10,
+              "description": "Service Fee"
+            }
+          ],
+          "prices": {
+            "afterTax": 119.94,
+            "beforeTax": 0
+          }
+        }
+      ],
+      "carrier": "FO",
+      "international": false,
+      "currency": "ARS"
+    },
+    {
+      "id": "RmxpZ2h0SW5mbzp7ImZsaWdodE5vIjo1MDE3LCJkZXBhcnR1cmVEYXRlIjoiMjAxOS0wMy0xM1QxNzo1MDowMC4wMDAtMDM6MDAiLCJsZmlkIjo1NDgyOH0=",
+      "origin": "COR",
+      "destination": "EPA",
+      "departureDate": "2019-03-13T17:50:00.000-03:00",
+      "arrivalDate": "2019-03-13T19:05:00.000-03:00",
+      "flightNo": 5017,
+      "fares": [
+        {
+          "fareRef": "3",
+          "passengerType": "ADULT",
+          "class": "S",
+          "basis": "STANDBY",
+          "availability": 0,
+          "taxes": [
+            {
+              "taxRef": "621",
+              "codeType": "TAX",
+              "amount": 20,
+              "description": "Tasa de Seguridad TQ"
+            },
+            {
+              "taxRef": "622",
+              "codeType": "TAX",
+              "amount": 89.94,
+              "description": "Tasa Aeroportuaria XR"
+            },
+            {
+              "taxRef": "623",
+              "codeType": "TAX",
+              "amount": 0,
+              "description": "IVA Argentina"
+            },
+            {
+              "taxRef": "801",
+              "codeType": "TAX",
+              "amount": 10,
+              "description": "Service Fee"
+            }
+          ],
+          "prices": {
+            "afterTax": 119.94,
+            "beforeTax": 0
+          }
+        }
+      ],
+      "carrier": "FO",
+      "international": false,
+      "currency": "ARS"
+    }
+  ]
+}
