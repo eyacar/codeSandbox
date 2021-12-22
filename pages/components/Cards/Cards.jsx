@@ -5,6 +5,8 @@ import Airports from "../../../data/airports.json";
 import Airplane from "../../../asset/airplane.jpeg";
 import Trip from "../../../asset/trip.jpeg";
 
+import css from "./style/cards.module.css";
+
 const AirportCard = ({
   airportCode,
   handleSelection = () => {},
@@ -27,15 +29,16 @@ const AirportCard = ({
   return (
     <div
       onClick={() =>
-        handleSelection(
-          isFlightCard ? isFlightCard.flightNumber || 0 : airportCode
-        )
+        handleSelection(isFlightCard ? flightData.flightNumber : airportCode)
       }
+      className={css.container}
     >
       <img src={imgSrc} alt="Airplane" width="200" height="200" />
-      <h1>Airport Code: {airportCode}</h1>
-      <h1>Location: {location}</h1>
-      {isFlightCard && <FlightCard flightData={flightData} />}
+      <div>
+        <h1>Airport Code: {airportCode}</h1>
+        <h1>Location: {location}</h1>
+        {isFlightCard && <FlightCard flightData={flightData} />}
+      </div>
     </div>
   );
 };

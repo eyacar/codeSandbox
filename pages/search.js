@@ -3,9 +3,11 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import FlightHelper from "../helpers/FlightHelper";
 import StaticHelper from "../helpers/StaticHelper";
-import Cards from "./components/Cards/Cards";
+import ListOfCards from "./components/ListOfCards";
 import epaCor from "../data/epa-cor.json";
 import epaMdz from "../data/epa-mdz.json";
+
+import css from "./style/search.module.css";
 
 const flights = [...epaCor.flights, ...epaMdz.flights];
 
@@ -20,7 +22,9 @@ export default function Search() {
   useEffect(() => {
     const params = StaticHelper.getUrlParams("airportSortValue");
 
-    if (!params) return null;
+    const isValidParam = params === "origin" || params === "destination";
+
+    if (!params || !isValidParam) return null;
 
     let isOrigin = router.query.airportSortValue?.includes("origin");
 
@@ -49,8 +53,8 @@ export default function Search() {
     }
   }, [title]);
 
-  function handleSelection(code) {
-    setSelectedAirport(code);
+  function handleItemSelection(isItemSelected) {
+    setSelectedAirport(isItemSelected);
   }
 
   const availableAirportList = useMemo(() => {
@@ -66,23 +70,18 @@ export default function Search() {
       );
 
     return (
-      <ul>
-        {availableAirport.map((code, i) => (
-          <li key={i}>
-            {selectedAirport === code && "holaaaaaaaaa"}
-            <Cards airportCode={code} handleSelection={handleSelection} />
-          </li>
-        ))}
-      </ul>
+      <ListOfCards
+        data={availableAirport}
+        handleItemSelection={handleItemSelection}
+      />
     );
-  }, [availableAirport, selectedAirport]);
+  }, [availableAirport]);
 
   const link = useMemo(() => {
     if (title) {
       if (!selectedAirport)
         return (
-          /*eslint-disable-next-line*/
-          <a>You need to select an airport</a>
+          <p className={css.container__link}>You need to select an airport</p>
         );
 
       let airportCode = selectedAirport;
@@ -94,7 +93,7 @@ export default function Search() {
           }}
         >
           {/*eslint-disable-next-line*/}
-          <a>Start your journey!</a>
+          <a className={css.container__link}>Start your journey!</a>
         </Link>
       );
     }
@@ -102,8 +101,8 @@ export default function Search() {
 
   return (
     <main>
-      <article>
-        <h1>Select your {title}</h1>
+      <article className={css.container}>
+        <h1 className={css.container__title}>Select your {title}</h1>
         <section>{availableAirportList}</section>
         {link}
       </article>

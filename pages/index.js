@@ -1,6 +1,8 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 
+import css from "./style/index.module.css";
+
 export default function Home() {
   const refAirportSortValue = useRef();
   const [airportSortValue, setAirportSortValue] = useState(null);
@@ -26,13 +28,13 @@ export default function Home() {
           }}
         >
           {/*eslint-disable-next-line*/}
-          <a>Search</a>
+          <a className={css.container__link}>Search</a>
         </Link>
       );
   }, [airportSortValue]);
 
   return (
-    <main>
+    <main className={css.container}>
       <h1>Home Page</h1>
       <article>
         <section>
@@ -43,7 +45,11 @@ export default function Home() {
           <br />
           <br />
           <label>By</label>
-          <select ref={refAirportSortValue} onChange={handleChang}>
+          <select
+            ref={refAirportSortValue}
+            onChange={handleChang}
+            className={css.container__input}
+          >
             <option value="origin" defaultValue>
               Origin
             </option>

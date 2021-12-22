@@ -1,0 +1,14 @@
+.container {
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container__title {
+  text-align: center;
+}
+
+.container__link {
+  font-size: 1.5em;
+  margin: 20px auto;
+}

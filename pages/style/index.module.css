@@ -1,0 +1,19 @@
+.container {
+  text-align: center;
+}
+
+.container__input {
+  margin-left: 5px;
+}
+
+.container__link:link,
+.container__link:visited,
+.container__link:active {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  border: rgb(170, 136, 22) solid 2px;
+  cursor: pointer;
+  padding: 5px;
+  background-color: rgba(255, 233, 0, 0.5);
+}
